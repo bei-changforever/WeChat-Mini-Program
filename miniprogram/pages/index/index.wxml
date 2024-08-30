@@ -1,0 +1,90 @@
+<!--pages/index/index.wxml-->
+<!-- 顶部导航栏 -->
+<view class="customheader" wx:if="{{customHeaderShow}}">
+  <custom-header HomeFlag="true" customTitle="粤茶"></custom-header>
+</view>
+<!-- 轮播图 -->
+<swiper id="banner" class="swiper-box" autoplay circular indicator-active-color indicator-dots>
+  <swiper-item class="banner-item" wx:for="{{bannerList}}" wx:key="_id">
+    <image class="banner-item-img" src="{{item.imgSrc}}" mode="widthFix" />
+  </swiper-item>
+</swiper>
+<view class="container-box">
+
+  <!-- 首页nav -->
+  <view class="index-card">
+    <view class="index-card-item" wx:for="{{index_card_item}}" wx:key="index">
+      <view class="img">
+        <image class="index-card-img" src="{{item.icon}}" mode="widthFix" />
+      </view>
+      <view class="card-text">
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 上新 -->
+  <view class="week-new">
+    <view class="week-new-box">
+      <view class="week-title">
+        <view class="img">
+          <image class="week-title-img" src="../../assets/images/new_coffe.png" mode="widthFix" />
+        </view>
+        <view class="text">
+          <text>New Coffee</text>
+        </view>
+        <view class="time">
+          <text>{{mm}}/</text><text>{{dd}}</text>
+        </view>
+      </view>
+      <van-divider contentPosition="right" customStyle="margin-top: 0;">
+        新品❤
+      </van-divider>
+
+
+      <view class="week-new-product"  >
+        <view class="product-item" bindtap="gotoProductDetailPage" data-pid="{{item.pid}}" wx:for="{{newProductList}}" wx:key="pid">
+          <view class="product-img" data-pid="{{item.pid}}">
+            <image class="auto-img" data-pid="{{item.pid}}" src="{{item.smallImg}}" mode="widthFix" />
+            <van-icon name="new" class="new-icon" />
+          </view>
+          <view class="product-desc" data-pid="{{item.pid}}">
+            <view class="coffe-name">
+              <text class="name">{{item.name}}</text>
+              <text class="type">{{item.typeDesc}}</text>
+            </view>
+            <view class="price">
+              <view class="price-title">
+                预估到手
+              </view>
+              <view class="price-price">
+                ￥{{item.price}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+
+    </view>
+  </view>
+
+  <!-- 咖啡宣传 -->
+  <view class="origin">
+    <view class="img">
+      <image class="auto-img" src="../../assets/images/new_coffe.png" mode="widthFix"/>
+    </view>
+    <view class="text">
+      <text>Origin</text>
+    </view>
+    <view class="chtext">
+      <text>读懂咖啡</text>
+    </view>
+  </view>
+  <water-full desc="{{coffe_desc}}"></water-full>
+
+  <van-divider contentPosition="center">到底啦~</van-divider>
+
+</view>
+

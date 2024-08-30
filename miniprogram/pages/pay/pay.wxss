@@ -1,0 +1,264 @@
+/* pages/pay/pay.wxss */
+
+.container {
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 15vh;
+  background-color: rgb(12, 52, 186);
+}
+
+.banner .tab-box {
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  bottom: -40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 7vh;
+  background-color: white;
+}
+
+.banner .tab-box .tab-ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+}
+
+.banner .tab-box .tab-ul .tab-li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .tab-box .tab-ul .tab-li text {
+  height: 100%;
+  width: 50%;
+  /* background-color: pink; */
+  text-align: center;
+
+}
+
+.banner .tab-box .tab-ul .tab-li text.active {
+  border-bottom: 2px solid rgb(12, 52, 186);
+}
+
+
+.section {
+  padding: 20rpx;
+  margin-top: 4vh;
+  width: 100VW;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* background-color: pink; */
+}
+
+.section-box {
+  margin-bottom: 30rpx;
+  position: relative;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.section-box .left-cirle {
+  position: absolute;
+  bottom: 12.5vh;
+  left: -16rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: rgb(245, 245, 245);
+  /* background-color: pink; */
+
+}
+
+.section-box .right-cirle {
+  position: absolute;
+  bottom: 12.5vh;
+  right: -16rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: rgb(245, 245, 245);
+  /* background-color: pink; */
+
+}
+
+.order-information {
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 12vh;
+  background-color: white;
+}
+
+.order-information .title {
+  flex: 1;
+  line-height: 6vh;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.order-information .desc {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  line-height: 6vh;
+}
+
+.order-information .desc .order-number {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.order-information .desc .order-status {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.aside {
+  width: 100%;
+  height: auto;
+  /* background-color: pink; */
+}
+
+.card {
+  width: 100%;
+  height: 15vh;
+  overflow: hidden;
+  /* background-color: orange; */
+  background-color: white;
+}
+
+.card .product {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .product .img {
+  width: 30%;
+  height: 95%;
+}
+
+.card .product .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.card .product .content {
+  display: flex;
+  flex-direction: column;
+  width: 68%;
+  height: 95%;
+}
+
+.card .product .content .title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: tomato; */
+}
+
+.card .product .content .type-son {
+  font-size: 28rpx;
+  color: gray;
+}
+
+.card .product .content .desc {
+  color: gray;
+  width: 350rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card .product .content .price {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .product .content .price .tatol-price {
+  color: red;
+  font-weight: 700;
+}
+
+
+.card .product .content .price .count {
+  color: gray;
+  font-size: 28rpx;
+}
+
+.card .product .remove-btn {
+  width: 120rpx;
+  height: 100%;
+  border: none;
+  top: 0;
+  right: -120rpx;
+  color: white;
+  font-size: 30rpx;
+  background-color: crimson;
+  position: absolute;
+}
+
+.section-box .time-total {
+  position: relative;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10vh;
+  /* background-color: pink; */
+}
+
+.section-box .time-total::after {
+  content: "";
+  position: absolute;
+  top: -38rpx;
+  width: 100%;
+  height: 2rpx;
+  border-top: 2rpx dashed #cccccc;
+}
+
+.section-box .time-total .time {
+  flex: 1;
+  line-height: 4vh;
+}
+
+.section-box .time-total .product-total {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-box .time-total .product-total .product-count {
+  color: gray;
+  font-size: 28rpx;
+}
+
+.section-box .time-total .product-total .product-total-price {
+  color: red;
+  font-size: 32rpx;
+  font-weight: 700;
+}

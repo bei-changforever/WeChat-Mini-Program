@@ -1,0 +1,73 @@
+/* pages/cart/cart.wxss */
+.customheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.van-submit-bar__safe {
+  height: 0 !important;
+}
+
+.product-bag {
+  width: 100%;
+  margin-top: 200rpx;
+  position: relative;
+}
+
+
+.delpro {
+  background-color: RGB(238, 10, 36);
+  color: white;
+  width: 130rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formbox {
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.radi {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+
+.sub-box {
+ width: 60%;
+ display: flex;
+ /* background-color: orange; */
+ justify-content: space-between;
+ align-items: center;
+}
+.sub-box .price {
+  width: 60%;
+
+}
+
+
+.subbtn {
+  display: block;
+  width: 200rpx;
+  background-color: rgb(238,10,36);
+  color: white;
+}

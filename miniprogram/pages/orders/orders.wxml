@@ -1,0 +1,84 @@
+<!--pages/orders/orders.wxml-->
+<view class="orders-box">
+  <van-nav-bar title="确认订单" left-text="返回" left-arrow bind:click-left="onClickLeft" />
+  <view class="orders-card">
+    <!-- 地址 -->
+
+
+    <!-- <view class="address-card" bindtap="gotoAddress">
+      <view class="left">
+        <van-icon color="rgb(19,34,122)" name="location" />
+      </view>
+      <view class="center" wx:if="{{address}}">
+        {{address}}
+      </view>
+      <view class="center" wx:else>
+        地址定位中
+      </view>
+      <view class="right">
+        <van-icon name="arrow" />
+      </view>
+    </view> -->
+
+
+    <view class="address-card" wx:if="{{us}}" bindtap="gotoAddress">
+      <view class="left">
+        <van-icon color="rgb(19,34,122)" name="location" />
+      </view>
+      <view style="text-align: left;width: 80%;" class="center">
+        <view class="user-address">
+          <text>{{us.province}}·{{us.city}}·{{us.county}}</text>
+          <text>{{us.addressDetail}}</text>
+        </view>
+        <view class="user-info">
+          <text>{{us.name}}</text>
+          <text>{{us.tel}}</text>
+        </view>
+      </view>
+      <view class="right">
+        <van-icon name="arrow" />
+      </view>
+    </view>
+
+    <view class="address-card" bindtap="gotoAddress" wx:else>
+      <view class="left">
+        <van-icon color="rgb(19,34,122)" name="location" />
+      </view>
+      <view style="text-align: left;width: 80%;" class="center">
+        选择地址
+      </view>
+      <view class="right">
+        <van-icon name="arrow" />
+      </view>
+    </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 商品 -->
+    <view class="pro-card" wx:for="{{product}}" wx:key="index">
+      <van-card num="{{item.count}}" price="{{item.price}}" desc="{{item.rule}}" title="{{item.name}}" thumb="{{ item.small_img }}">
+        <view slot="footer">
+          <van-button data-item="{{item}}" data-index="{{index}}" size="mini" data-count="{{item.count}}" data-sid="{{item.sid}}" data-num="1" disabled="{{item.count == 1}}" bind:click="modifyShopcartCountsub">-1</van-button>
+          <van-button data-item="{{item}}" data-index="{{index}}" size="mini" data-count="{{item.count}}" data-sid="{{item.sid}}" data-num="1" bind:click="modifyShopcartCountadd">+1</van-button>
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <van-submit-bar price="{{ totalPrice}}" button-text="提交订单" bind:submit="onSubmit" />
+</view>

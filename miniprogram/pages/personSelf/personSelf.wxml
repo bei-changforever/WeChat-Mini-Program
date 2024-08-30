@@ -1,0 +1,20 @@
+<!--pages/personSelf/personSelf.wxml-->
+<van-nav-bar title="个人信息" left-text="返回" left-arrow bind:click-left="onClickLeft" />
+
+<form bindsubmit="formSubmit">
+
+  <van-cell-group wx:if="{{info[0]}}">
+    <view class="touxiang">
+   <view class="tou"> 
+        头像
+ 
+      </view> 
+      <van-uploader name="photo" catch:delete="deleteImg" deletable="{{ true }}" max-count="1" bind:after-read="afterRead" file-list="{{ fileList }}" />
+    </view>
+    <van-field value="{{info[0].nickName}}" name="nickName" type="text" label="昵称" placeholder="{{'请输入昵称'}}" />
+    <van-field value="{{info[0].desc}}" name="desc" type="text" label="简介" placeholder="{{'请输入简介'}}" border="{{ false }}" />
+  </van-cell-group>
+
+  <button class="save-btn" form-type="submit">保存</button>
+
+</form>

@@ -1,0 +1,65 @@
+<view class="cart-box">
+  <!-- 顶部导航栏 -->
+  <view id="ff" class="customheader" wx:if="{{customHeaderShow}}">
+    <custom-header cartFlag="true" customTitle="购物袋"></custom-header>
+  </view>
+
+
+  <view class="product-bag" style="margin-top: {{Headerheight}}rpx;">
+
+    <view wx:for="{{shopRes}}" wx:key="index">
+      <van-swipe-cell data-count="{{item.count}}" data-sid="{{item.sid}}" id="swipe-cell" right-width="{{ 65 }}" async-close bind:close="onClose">
+        <van-cell-group>
+          <van-card num="{{item.count }}" price="{{item.price * item.count}}" desc="{{item.rule}}" title="{{item.name}}" thumb="{{ item.small_img }}">
+            <view class="footer" slot="footer">
+
+
+              <view data-item="{{item}}" data-index="{{index}}" bindtap='productItemCheck'>
+                {{shopRes.choosed}}
+                <radio data-item="{{item}}" data-index="{{index}}" checked="{{item.choosed}}"></radio>
+              </view>
+              <van-button data-item="{{item}}" data-index="{{index}}" size="mini" data-count="{{item.count}}" data-sid="{{item.sid}}" data-num="1" disabled="{{item.count == 1}}" bind:click="modifyShopcartCountsub">-1</van-button>
+              <van-button data-item="{{item}}" data-index="{{index}}" size="mini" data-count="{{item.count}}" data-sid="{{item.sid}}" data-num="1" bind:click="modifyShopcartCountadd">+1</van-button>
+
+            </view>
+
+          </van-card>
+
+        </van-cell-group>
+        <view slot="right" data-count="{{item.count}}" data-sid="{{item.sid}}" class="delpro">删除</view>
+      </van-swipe-cell>
+
+
+    </view>
+
+  </view>
+
+  <van-dialog id="van-dialog" />
+
+
+  <form bindsubmit="formsubmit">
+    <view class="formbox">
+      <view class="radi" bindtap='checkedTap'>
+        <radio checked="{{allCheck}}">全选</radio>
+      </view>
+      <view class="sub-box">
+        <view class="price">
+          <view class="price-text">
+            合计: <text style="color: rgb(238,10,36);font-weight: bold;">￥{{totalPrice}}</text>
+          </view>
+        </view>
+        <button disabled="{{disable}}" class="subbtn" form-type="submit">结算</button>
+      </view>
+    </view>
+  </form>
+
+
+
+
+
+  <!-- <van-submit-bar price="{{ totalPrice }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
+    <view bindtap='checkedTap'>
+      <radio checked="{{allCheck}}">全选</radio>
+    </view>
+  </van-submit-bar> -->
+</view>

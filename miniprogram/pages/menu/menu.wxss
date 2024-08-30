@@ -1,0 +1,283 @@
+/* pages/menu/menu.wxss */
+.customheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.box2 {
+  margin-top: 20rpx;
+  background: white;
+  width: 100%;
+  height: 100rpx;
+}
+
+
+.address {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.address-box {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.left {
+  width: 500rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.left-text {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.right {
+  width: 150rpx;
+  height: 50rpx;
+  background-color: rgb(246, 246, 246);
+  border-radius: 999rpx;
+}
+
+.right-box {
+  display: flex;
+  font-size: 26rpx;
+}
+
+.right-btn {
+  width: 50%;
+  text-align: center;
+  line-height: 50rpx;
+  color: rgb(153, 153, 153);
+}
+
+.right-btn.active {
+  background-color: rgb(9, 34, 163);
+  color: white;
+  border-radius: 999rpx;
+}
+
+
+.menu {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+
+.container-head-sc {
+  height: 50rpx;
+  border-radius: 25rpx;
+  background: #eeece4;
+  color: #333;
+  overflow: hidden;
+  /* 不换行 */
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-head-sc .sc-item {
+  padding: 0 20rpx;
+  min-width: 30%;
+  text-align: center;
+  line-height: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  /* 防止高度塌陷 */
+  vertical-align: top;
+  font-size: 26rpx;
+  color: rgb(153, 153, 153);
+}
+
+/* 添加菜单激活样式 */
+.container-head-sc .sc-item.active {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(9, 34, 163);
+  border-radius: 25rpx;
+}
+
+.container-swiper {
+  /* 注意！ swiper不设置高度的话，默认是150px */
+  height: calc(100% - 110rpx);
+}
+
+.menu-detail-sc {
+  padding: 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.main-warp {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sunbox {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+  background-color: white;
+}
+
+
+.sunbox .img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+
+}
+
+
+.sunbox .img .sun-img {
+  width: 100%;
+  border-radius: 20rpx;
+}
+
+.price-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.price-box .desc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-box .desc .name {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+
+.price {
+  margin-top: 10rpx;
+  width: 220rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245,237,235);
+  color: white;
+  font-size: 22rpx;
+  border-radius: 14rpx;
+  overflow: hidden;
+  text-align: center;
+  line-height: 50rpx;
+
+}
+
+.price-title {
+  width: 55%;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(231,97,63);
+  
+}
+
+.price-price {
+  position: relative;
+  width: 45%;
+  height: 100%;
+  background-color: rgb(231,97,63);
+  font-size: 20rpx;
+ 
+}
+
+.price-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -28rpx;
+  border: 20rpx solid;
+  transform: rotate(-25deg);
+  border-color: transparent rgb(231,97,63) transparent transparent;
+
+}
+
+.price-price::before {
+  content: "";
+  position: absolute;
+  top: 29rpx;
+  left: -39rpx;
+  border: 24rpx solid;
+  transform: rotate(-20deg);
+  border-color: transparent rgb(231,97,63) transparent transparent;
+
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 0;   
+  height: 0;
+  color: transparent;
+}
+
+/* 遮罩层 */
+.layer-mark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.context-layer {
+  width: 600rpx;
+  height: 400rpx;
+  background-color: white;
+
+
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.btn-conmon.btn-cancel {
+  border: 1px solid #999;
+  margin: 20rpx 0;
+}
+
+.btn-conmon.btn-confirm {
+  background-color: tomato;
+  color: white;
+}

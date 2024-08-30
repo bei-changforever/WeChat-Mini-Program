@@ -1,0 +1,49 @@
+<!--pages/address/address.wxml-->
+<view class="address-box">
+  <van-nav-bar title="地址管理" left-text="返回" left-arrow bind:click-left="onClickLeft" />
+
+  <!-- 默认地址 -->
+  <view class="default-address">
+
+    <view class="address-card" wx:for="{{info}}" wx:key="index">
+      <view class="left">
+        <van-icon color="rgb(19,34,122)" name="location" />
+      </view>
+      <view style="text-align: left;width: 80%;" class="center">
+        <view class="user-address">
+          <text>{{item.province}}·{{item.city}}·{{item.county}}</text>
+          <text>{{item.addressDetail}}</text>
+        </view>
+        <view class="user-info">
+          <text>{{item.name}}</text>
+          <text>{{item.tel}}</text>
+        </view>
+      </view>
+      <view class="right">
+
+        <view data-index="{{index}}" bindtap='checkedTap'>
+          <radio data-index="{{index}}" data-item="{{item}}" data-info="{{info}}" checked="{{activeIndex === index}}" />
+        </view>
+
+
+
+      </view>
+    </view>
+
+
+  </view>
+
+  <!-- 常用地址 -->
+  <view class="commonly-used">
+
+  </view>
+  <!-- 新增地址 -->
+  <!-- <view class="btn">
+    <button class="add" bindtap="gotoNew">添加</button>
+    <button>确定</button>
+  </view> -->
+  <van-goods-action>
+    <van-goods-action-button text="确定" type="warning"  bind:click="sure"/>
+    <van-goods-action-button text="添加" bind:click="gotoNew"/>
+  </van-goods-action>
+</view>

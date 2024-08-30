@@ -1,0 +1,128 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/3/13上午11:31:37
+使用方法：
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\menu\menu.wxml 引入模板
+
+```
+<import src="menu.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\menu\menu.wxss 中引入样式
+```
+@import "./menu.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="customheader" id="customheader">
+      <view is="components/navigationBar/navigationBar">
+        <view class="navigationBar--customHeader_box navigationBar--active" style="height:60px;">
+          <view class="navigationBar--menu_box" style="height:32px; top:24px;">
+            <view class="navigationBar--customIcon navigationBar--menuthis">
+              <image class="navigationBar--menuthis-img sk-image"></image>
+              <text class="sk-transparent sk-text-14-2857-667 sk-text" style="background-position-x: 50%;">拼单</text>
+            </view>
+          </view>
+          <view class="navigationBar--customHeader_title navigationBar--active" style="top:24px; height:32px; line-height:32px;">
+            <view class="navigationBar--cus-icon-input">
+              <view is="miniprogram_npm/@vant/weapp/icon/index" class="navigationBar--cus-icon">
+                <view class="van-icon icon-index--van-icon van-icon-search icon-index--van-icon-search sk-pseudo sk-pseudo-circle" style="{{true}}"></view>
+              </view>
+              <view class="navigationBar--input sk-image" placeholder="大家都在喝碧螺知春" type="text"></view>
+            </view>
+          </view>
+        </view>
+        <view class="navigationBar--customWrap" style="height:60px;"></view>
+      </view>
+    </view>
+    <view class="box2" style="position: sticky;top: 52px;z-index: 99;">
+      <view class="address" style="margin-top: 52px;">
+        <view class="address-box">
+          <view class="left">
+            <text class="left-text sk-transparent sk-text-14-2857-58 sk-text">地址定位中&gt;&gt;&gt;</text>
+          </view>
+          <view class="right">
+            <view class="right-box">
+              <view class="right-btn active sk-transparent sk-text-24-0000-79 sk-text" data-type="zt" style="background-position-x: 50%;">
+                自提
+              </view>
+              <view class="right-btn sk-transparent sk-text-24-0000-988 sk-text" data-type="ws" style="background-position-x: 50%;">
+                外送
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="menu">
+      <view class="menu-tab">
+        <scroll-view enable-flex="true" class="container-head-sc" data-type="undefined" scroll-left="0" scroll-with-animation="true" scroll-x="true">
+          <view class="sc-item active sk-transparent sk-text-24-0000-925 sk-text" data-currnet="0" data-type="isHot" style="background-position-x: 50%;">
+            热卖推荐
+          </view>
+          <view class="sc-item false sk-transparent sk-text-24-0000-129 sk-text" data-currnet="1" data-type="latte" style="background-position-x: 50%;">
+            拿铁
+          </view>
+          <view class="sc-item false sk-transparent sk-text-24-0000-646 sk-text" data-currnet="2" data-type="coffee" style="background-position-x: 50%;">
+            咖啡
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="menu-detail-sc">
+      <swiper current="0" style="width:100vw;height: 100vh;" autoplay="false">
+        <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+          <scroll-view scroll-y="true" style="height: 100%" enable-back-to-top="true">
+            <view class="main-warp">
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+                <view class="sk-transparent sk-text-14-2857-289 sk-text">
+                  焦糖拿铁
+                </view>
+              </view>
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+                <view class="sk-transparent sk-text-14-2857-336 sk-text">
+                  榛果拿铁
+                </view>
+              </view>
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+                <view class="sk-transparent sk-text-14-2857-976 sk-text">
+                  奥瑞白
+                </view>
+              </view>
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+                <view class="sk-transparent sk-text-14-2857-418 sk-text">
+                  黑糖啵啵拿铁
+                </view>
+              </view>
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+              </view>
+              <view class="sunbox">
+                <view class="img">
+                  <image class="sun-img sk-image" mode="widthFix" style="height: 141px;"></image>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</template>

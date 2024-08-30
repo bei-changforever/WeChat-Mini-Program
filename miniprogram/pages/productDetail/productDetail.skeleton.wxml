@@ -1,0 +1,114 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/3/14上午11:01:18
+使用方法：
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\productDetail\productDetail.wxml 引入模板
+
+```
+<import src="productDetail.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\productDetail\productDetail.wxss 中引入样式
+```
+@import "./productDetail.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="product-big-box">
+      <view class="customheader">
+        <view is="components/navigationBar/navigationBar">
+          <view class="navigationBar--customHeader_box" style="height:87px;">
+            <view class="navigationBar--menu_box" style="height:32px; top:51px;">
+              <view class="navigationBar--customIcon navigationBar--backicon">
+                <view is="miniprogram_npm/@vant/weapp/icon/index" class="navigationBar--backicon-icon">
+                  <view class="van-icon icon-index--van-icon van-icon-arrow-left icon-index--van-icon-arrow-left sk-pseudo sk-pseudo-circle" style="color:white"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="navigationBar--customWrap" style="height:87px;"></view>
+        </view>
+      </view>
+      <view class="banner">
+        <image class="banner-img sk-image" mode="widthFix" style="height: 319.055px;"></image>
+      </view>
+      <view class="detail-info">
+        <view class="name-price">
+          <view class="name">
+            <view style="font-size: 20px;font-weight: bold;" class="sk-transparent sk-text-14-2857-537 sk-text">黑糖啵啵拿铁</view>
+            <view class="enname sk-transparent sk-text-14-2857-433 sk-text">Brown Sugar Bubble Latte</view>
+          </view>
+          <view class="collect">
+            <view class="collect-btn">
+              <view is="miniprogram_npm/@vant/weapp/icon/index">
+                <view class="van-icon icon-index--van-icon van-icon-like-o icon-index--van-icon-like-o sk-pseudo sk-pseudo-circle" style="font-size:20px"></view>
+              </view>
+            </view>
+            <view class="colllect-title sk-transparent sk-text-14-2857-418 sk-text">
+              收藏口味
+            </view>
+          </view>
+        </view>
+        <view class="rule-box">
+          <view class="rule-item">
+            <view class="rule-title sk-transparent sk-text-19-2308-306 sk-text">奶油</view>
+            <view class="r-items">
+              <view class="r-item sk-transparent sk-text-27-5862-242 sk-text" style="background-position-x: 50%;">默认奶油</view>
+              <view class="r-item sk-transparent sk-text-27-5862-708 sk-text" style="background-position-x: 50%;">无奶油</view>
+            </view>
+          </view>
+          <view class="rule-item">
+            <view class="rule-title sk-transparent sk-text-19-2308-943 sk-text">糖</view>
+            <view class="r-items">
+              <view class="r-item sk-transparent sk-text-27-5862-658 sk-text" style="background-position-x: 50%;">全糖</view>
+              <view class="r-item sk-transparent sk-text-27-5862-413 sk-text" style="background-position-x: 50%;">半糖</view>
+            </view>
+          </view>
+          <view class="rule-item">
+            <view class="rule-title sk-transparent sk-text-19-2308-46 sk-text">温度</view>
+            <view class="r-items">
+              <view class="r-item sk-transparent sk-text-27-5862-34 sk-text" style="background-position-x: 50%;">冷</view>
+              <view class="r-item sk-transparent sk-text-27-5862-972 sk-text" style="background-position-x: 50%;">热</view>
+            </view>
+          </view>
+        </view>
+        <view class="desc-box">
+          <view class="desc-title sk-transparent sk-text-14-2857-19 sk-text">商品描述</view>
+          <view class="desc-info">
+            <view class="desc-info-item sk-transparent sk-text-14-2857-909 sk-text">1、独特的黑糖风味拿铁，佐以Q嫩儒糯的黑糖口味珍珠，创造出层次丰富的美妙口感。（建议搅拌后饮用）</view>
+            <view class="desc-info-item sk-transparent sk-text-14-2857-330 sk-text">2、主要原材料：浓缩咖啡，黑糖味珍珠，纯牛奶，黑糖味调味糖浆，原味调味糖浆，可选择添加搅打奶油（含香草风味糖浆）</view>
+            <view class="desc-info-item sk-transparent sk-text-14-2857-55 sk-text">3、图片仅供参考，请以实物为准，建议取餐后尽快饮用。</view>
+          </view>
+        </view>
+        <view class="footer" style="bottom: 34px;">
+          <view class="footer-top">
+            <view class="footer-price-box">
+              <view class="footer-price sk-transparent sk-text-14-2857-261 sk-text">
+                ￥28.00
+              </view>
+              <view class="youchoose sk-transparent sk-text-14-2857-432 sk-text">
+                碧螺知春拿铁￥20+冰￥0+标准糖￥0+无奶油￥0
+              </view>
+            </view>
+            <view class="step">
+              <view is="miniprogram_npm/@vant/weapp/stepper/index">
+                <view class="van-stepper index--van-stepper ">
+                  <view class="van-stepper__minus index--van-stepper__minus van-stepper__minus--disabled index--van-stepper__minus--disabled sk-pseudo sk-pseudo-circle" data-type="minus" hover-class="van-stepper__minus--hover" hover-stay-time="70" style="{{true}}"></view>
+                  <view class="van-stepper__input index--van-stepper__input sk-image" style="{{true}}" type="digit" value="1"></view>
+                  <view class="van-stepper__plus index--van-stepper__plus sk-pseudo sk-pseudo-circle" data-type="plus" hover-class="van-stepper__plus--hover" hover-stay-time="70" style="{{true}}"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="footer-bottom">
+            <button class="btn1 sk-transparent sk-button sk-pseudo sk-pseudo-circle">立即购买</button>
+            <button class="btn2 sk-transparent sk-button sk-pseudo sk-pseudo-circle">加入购物车</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

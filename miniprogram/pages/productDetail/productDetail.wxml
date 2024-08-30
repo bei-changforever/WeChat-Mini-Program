@@ -1,0 +1,75 @@
+<!--pages/productDetail/productDetail.wxml-->
+<view class="product-big-box">
+  <view class="customheader" wx:if="{{customHeaderShow}}">
+    <custom-header productInfoFlag="true"></custom-header>
+  </view>
+  <!-- 大图展示 -->
+  <view class="banner">
+    <image class="banner-img" src="{{productInfo.large_img}}" mode="widthFix" />
+  </view>
+  <!-- 内容展示 -->
+  <view class="detail-info">
+
+    <view class="name-price">
+      <view class="name">
+        <view style="font-size: 36rpx;font-weight: bold;">{{productInfo.name}}</view>
+        <view class="enname">{{productInfo.enname}}</view>
+      </view>
+      <view class="collect" >
+        <view class="collect-btn" bindtap="addCollect">
+          <van-icon wx:if="{{!isLike}}" size="20" name="like-o" />
+          <van-icon wx:else="" color="red" size="20" name="like" />
+        </view>
+        <view class="colllect-title">
+          收藏口味
+        </view>
+      </view>
+
+    </view>
+
+    <view class="rule-box">
+      <view class="rule-item" wx:for="{{productInfo.ruleData}}" wx:for-item="item" wx:key="index">
+        <view class="rule-title">{{item.title}}</view>
+        <view class="r-items">
+          <!-- {{item.subRule}} -->
+          <view bindtap="chooseType" data-num="{{index}}" data-type="{{item}}" data-index="{{i1}}" class="{{['r-item', item.activeIndex == i1 ? 'active' : '']}}" wx:for="{{item.subRule}}" wx:for-item="v1" wx:for-index="i1" wx:key="i1">
+            {{v1.title}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="desc-box">
+      <view class="desc-title">商品描述</view>
+      <view class="desc-info" wx:if="{{productInfo.desc}}">
+        <view class="desc-info-item" wx:for="{{productInfo.desc}}" wx:key="index">{{index + 1}}、{{item}}</view>
+      </view>
+    </view>
+
+    <view class="footer" style="bottom: {{bottomHeight}}px;">
+      <view class="footer-top">
+        <view class="footer-price-box">
+          <view class="footer-price">
+            ￥{{productInfo.price * Number_of_items}}
+          </view>
+          <view class="youchoose">
+            <text class="ininin" style="display: inline-block;" decode="{{true}}">
+              {{productInfo.name}}({{Number_of_items}}份)&nbsp; 
+            </text>
+            <text style="display: inline-block;" decode="{{true}}" wx:for="{{currentChoose}}" wx:key="index">
+              {{item.title}}&nbsp;
+            </text>
+          </view>
+        </view>
+        <view class="step">
+          <van-stepper value="{{ Number_of_items }}" bind:change="onChange" />
+        </view>
+
+      </view>
+      <view class="footer-bottom">
+        <button class="btn1" bindtap="paynow">立即购买</button><button  bindtap="addCart" class="btn2">加入购物车</button>
+      </view>
+    </view>
+
+  </view>
+</view>

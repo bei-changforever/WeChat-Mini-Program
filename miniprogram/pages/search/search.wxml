@@ -1,0 +1,38 @@
+<!--pages/search/search.wxml-->
+<view class="search-box">
+  <van-nav-bar left-text="返回" left-arrow bind:click-left="onClickLeft">
+    <view class="center" slot="title">
+      <input bindinput="writeKey" class="search-input" type="text" placeholder="请输入关键字" value="{{searchValue}}" />
+      <van-icon class="icon" name="search" bindtap="search" />
+    </view>
+  </van-nav-bar>
+
+  <view class="search-history" wx:if="{{ kwList.length > 0 && dataArr.length <= 0}}">
+    <view class="history-title">
+      <text>搜索历史</text>
+      <van-icon bind:click="del" name="delete-o" size="20" />
+    </view>
+    <view class="history-list" >
+      <view class="history-list-item" wx:for="{{kwList}}" wx:key="index" bindtap="chooseHistory" data-name="{{item}}">
+       {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="searchList" wx:if="{{dataArr.length > 0}}">
+    <view class="search-list-item" wx:for="{{dataArr}}" wx:key="pid" bindtap="gotoProductDetailPage" data-pid="{{item.pid}}">
+        <view class="img">
+           <image class="search-list-img" src="{{item.smallImg}}" mode="widthFix" data-pid="{{item.pid}}"/>
+        </view>
+        <view class="desc" data-pid="{{item.pid}}">
+          <view class="name">
+            {{item.name}}
+          </view>
+          <view class="price">
+            ￥{{item.price}}
+          </view>
+        </view>
+    </view>
+  </view>
+
+</view>

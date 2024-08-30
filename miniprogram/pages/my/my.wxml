@@ -1,0 +1,72 @@
+<!--pages/my/my.wxml-->
+<view class="my-box">
+  <view class="customheader" wx:if="{{customHeaderShow}}">
+    <custom-header myFlag="true" customTitle="个人中心"></custom-header>
+  </view>
+  <view class="banner">
+    <image class="banner-img" src="https://img.zcool.cn/community/01st1ojfsvxbjgwaiot6o03538.jpg?x-oss-process=image/auto-orient,1/resize,m_lfit,w_1280,limit_1/sharpen,100/format,webp/quality,q_100" mode="" />
+  </view>
+
+
+  <view class="my-and-my" >
+    <view class="my-login" wx:if="{{!userLogin}}" bindtap="gotoLogin">
+      <view class="img">
+        <image class="my-login-img" src="../../assets/images/OIP-C.jpg" mode="widthFix" />
+      </view>
+      <view class="name">
+        请先登录
+        <van-icon name="arrow" />
+      </view>
+    </view>
+
+    <view class="my-login" wx:else bindtap="gotoPersonSelf">
+      <view class="img">
+        <image class="my-login-img" src="{{info[0].userImg}}" mode="widthFix" />
+      </view>
+      <view class="name">
+        <view class="name-title">
+          {{info[0].nickName}}
+          <van-icon name="arrow" />
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="desc" >
+    <!-- {{info[0].desc}} -->简述:<text wx:if="{{userLogin}}"> {{info[0].desc}} </text>
+  </view>
+
+
+
+
+
+
+
+  <view class="user-menu">
+    <view class="user-tab" bindtap="gotoPay">
+      <image class="user-tab-img" src="../../assets/images/payinfo.png" mode="widthFix"></image>
+      <text >订单</text>
+    </view>
+    <view class="user-tab" bindtap="gotoStar">
+      <image class="user-tab-img" src="../../assets/images/collect.png" mode="widthFix" />
+      <text>收藏</text>
+    </view>
+    <view class="user-tab">
+      <image class="user-tab-img" src="../../assets/images/address.png" mode="widthFix" />
+      <text>地址管理</text>
+    </view>
+  </view>
+
+
+
+
+ 
+
+
+  <view class="footer" wx:if="{{userLogin}}">
+    <button class="loginout-btn" bindtap="loginout">退出登录</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,89 @@
+<!--pages/menu/menu.wxml-->
+<!-- 顶部导航栏 -->
+
+<view class="customheader" id="customheader">
+  <custom-header menuFlag="true"></custom-header>
+</view>
+
+<view class="box2" style="position: sticky;top: {{Headerheight}}rpx;z-index: 99;">
+  <!-- 地址栏 -->
+  <view class="address" style="margin-top: {{Headerheight}}rpx;">
+    <view class="address-box">
+      <view class="left">
+        <text class="left-text" wx:if="{{address}}">{{address}}></text>
+        <text class="left-text" wx:else>地址定位中>>></text>
+      </view>
+      <view class="right">
+        <view class="right-box">
+          <view bindtap="choose" class="{{['right-btn', activeType == item.type ? 'active' : '' ]}}" data-type="{{item.type}}" wx:for="{{addressBtn}}" wx:key="index">
+            {{item.title}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="menu">
+  <!-- 标题 -->
+  <view class="menu-tab">
+    <scroll-view data-type="{{item.type}}" enable-flex class="container-head-sc" scroll-x="true" scroll-left="{{sleft}}" scroll-with-animation="{{true}}">
+      <view data-type="{{item.type}}" class="sc-item {{currentTab == index && 'active'}}" data-currnet='{{index}}' catchtap="handleTabChange" wx:for="{{menuDate}}" wx:key="id">
+        {{item.typeDesc}}
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="menu-detail-sc" wx:if="{{currentData[currentTab]}}">
+  <!-- 内容 -->
+  <swiper style="width:100vw;height: 100vh;overflow: hidden;" current="{{currentTab}}" bindchange="handleSwiperChange">
+    <swiper-item wx:if="currentData" wx:for="{{currentData}}" wx:for-item="item" wx:key="index">
+      <scroll-view scroll-y="true" style="height: 100%">
+        <view class="main-warp" >
+          <view class="sunbox" wx:for="{{item}}" wx:for-item="child" wx:key="id"  bindtap="gotoProductDetailPage"  data-pid="{{child.pid}}">
+            <view class="img" data-pid="{{child.pid}}">
+              <image class="sun-img" data-pid="{{child.pid}}" src="{{child.smallImg}}" mode="widthFix" />
+            </view>
+            <view class="price-box"  data-pid="{{child.pid}}">
+              <view class="desc">
+              <view class="name"  data-pid="{{child.pid}}">
+                 {{child.name}}
+              </view>
+              <view class="add-btn"  data-pid="{{child.pid}}">
+                <van-icon size="26" name="add" data-pid="{{child.pid}}" color="rgb(6,34,160)"/>
+              </view>
+              </view>
+              <view class="price" data-pid="{{child.pid}}">
+              <view class="price-title">
+                预估到手
+              </view>
+              <view class="price-price" data-pid="{{child.pid}}">
+                ￥{{child.price}}
+              </view>
+            </view>
+            </view>
+          </view>
+          <view class="sunbox">          
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+
+<view class="layer-mark" wx:if="{{isShowLocationLayer}}">
+  <view class='context-layer' wx:if="{{isShowLocationLayer}}">
+    <view class='mask-layer' wx:if="{{isShowLocationLayer}}">
+      <view class="box-content">
+        <view class="content-title">"粤茶"需要获取你的地理位置</view>
+        <view class="content-txt">你的位置信息将用于位置显示</view>
+      </view>
+      <view class="box-bottom">
+        <button class="btn-conmon btn-cancel" bindtap="bindCancelLocation">取消</button>
+        <button class="btn-conmon btn-confirm" bindtap="bindConfirmLocation">确定</button>
+      </view>
+    </view>
+  </view>
+</view>

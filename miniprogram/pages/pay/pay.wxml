@@ -1,0 +1,82 @@
+<!--pages/pay/pay.wxml-->
+<view class="container">
+  <!-- 头部 -->
+  <van-nav-bar title="我的订单" left-text="返回" left-arrow bind:click-left="onClickLeft" />
+  <!-- 导航条 -->
+  <view class="banner">
+    <view class="tab-box">
+
+      <view class="tab-ul">
+
+        <view class="tab-li" data-index="{{index}}" data-status="{{item.status}}" bindtap="choose" wx:for="{{selectDate}}" wx:key="index">
+
+          <text data-index="{{index}}" data-status="{{item.status}}" class="{{index === currentIndex ? 'active' : '' }}">
+            {{item.title}}
+          </text>
+
+        </view>
+
+      </view>
+
+    </view>
+  </view>
+  <!-- 订单信息 -->
+  <view class="section">
+    <view class="section-box" wx:for="{{orders}}" wx:key="index">
+      <view class="order-information">
+        <view class="title">订单信息</view>
+        <view class="desc">
+
+          <view class="order-number">
+            订单编号:{{item.oid}}
+          </view>
+          <view class="order-status" wx:if="{{item.status == 1}}" data-oid="{{item.oid}}" bindtap="Confirm">
+            确认收货
+          </view>
+          <view wx:if="{{item.status == 2}}" data-oid="{{item.oid}}" bindtap="delPro" class="order-status" decode="{{true}}">
+            已完成
+            <van-icon name="delete-o"  data-oid="{{item.oid}}" />
+          </view>
+        </view>
+      </view>
+      <view class="aside">
+
+
+        <view class="card" wx:for="{{item.data}}" wx:for-item="pro" wx:for-index="i2" wx:key="i2">
+          <view class="product">
+            <view class="img">
+              <image src="{{pro.smallImg}}" mode="widthFix" />
+            </view>
+            <view class="content">
+              <view class="title">
+                <text class="type" decode="{{true}}">{{pro.name}}&nbsp;&nbsp;<text class="type-son">{{pro.rule}}</text></text>
+                <text class="desc">{{pro.enname}}</text>
+              </view>
+
+              <view class="price">
+                <text class="tatol-price">￥{{pro.price * pro.count}}</text>
+                <text class="count">x{{pro.count}}</text>
+              </view>
+
+            </view>
+            <button class="remove-btn">删除</button>
+          </view>
+        </view>
+
+
+      </view>
+      <view class="time-total">
+        <view class="time">{{item.date}}</view>
+        <view class="product-total">
+          <text class="product-count">共计{{item.count}}件商品</text>
+          <text class="product-total-price" decode="{{true}}">订单金额:&nbsp;&nbsp;￥{{item.total}}</text>
+
+        </view>
+      </view>
+      <view class="left-cirle"></view>
+      <view class="right-cirle"></view>
+    </view>
+  </view>
+
+
+</view>

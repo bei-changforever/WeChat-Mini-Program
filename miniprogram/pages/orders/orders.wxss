@@ -1,0 +1,30 @@
+/* pages/orders/orders.wxss */
+.orders-box {
+  width: 100%;
+}
+
+.orders-card {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.address-card {
+  width: 100%;
+  background-color: white;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  color: #999;
+  margin-top: 20rpx;
+  text-align: left;
+}
+
+
+
+.pro-card {
+  background-color: white;
+}

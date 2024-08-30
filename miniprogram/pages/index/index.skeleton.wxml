@@ -1,0 +1,112 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/3/13上午11:30:32
+使用方法：
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 C:\Users\Administrator\Desktop\miniprogram-8\miniprogram-8\miniprogram\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="customheader">
+      <view is="components/navigationBar/navigationBar">
+        <view class="navigationBar--customHeader_box" style="height:60px;">
+          <view class="navigationBar--menu_box" style="height:32px; top:24px;">
+            <view class="navigationBar--customIcon">
+              <image class="navigationBar--cus-img sk-image"></image>
+            </view>
+          </view>
+          <view class="navigationBar--customHeader_title sk-transparent sk-text-25-0000-792 sk-text" style="top: 24px; height: 32px; line-height: 32px; background-position-x: 50%;">
+            粤茶
+          </view>
+        </view>
+        <view class="navigationBar--customWrap" style="height:60px;"></view>
+      </view>
+    </view>
+    <swiper autoplay="false" circular="true" indicator-active-color="true" indicator-dots="true" class="swiper-box" id="banner" current="0"></swiper>
+    <view class="container-box">
+      <view class="index-card">
+        <view class="index-card-item">
+          <view class="img">
+            <image class="index-card-img sk-image" mode="widthFix" style="height: 30px;"></image>
+          </view>
+          <view class="card-text">
+            <text class="sk-transparent sk-text-14-2857-217 sk-text">Coffe</text>
+          </view>
+        </view>
+        <view class="index-card-item">
+          <view class="img">
+            <image class="index-card-img sk-image" mode="widthFix" style="height: 30px;"></image>
+          </view>
+          <view class="card-text">
+            <text class="sk-transparent sk-text-14-2857-103 sk-text">News</text>
+          </view>
+        </view>
+        <view class="index-card-item">
+          <view class="img">
+            <image class="index-card-img sk-image" mode="widthFix" style="height: 30px;"></image>
+          </view>
+          <view class="card-text">
+            <text class="sk-transparent sk-text-14-2857-132 sk-text">Activity</text>
+          </view>
+        </view>
+        <view class="index-card-item">
+          <view class="img">
+            <image class="index-card-img sk-image" mode="widthFix" style="height: 30px;"></image>
+          </view>
+          <view class="card-text">
+            <text class="sk-transparent sk-text-14-2857-775 sk-text">Found</text>
+          </view>
+        </view>
+      </view>
+      <view class="week-new">
+        <view class="week-new-box">
+          <view class="week-title">
+            <view class="img">
+              <image class="week-title-img sk-image" mode="widthFix" style="height: 50px;"></image>
+            </view>
+            <view class="text">
+              <text class="sk-transparent sk-text-14-2857-281 sk-text" style="background-position-x: 50%;">New Coffee</text>
+            </view>
+            <view class="time">
+              <text class="sk-transparent sk-text-14-2857-667 sk-text" style="background-position-x: 50%;">03/</text>
+              <text class="sk-transparent sk-text-14-2857-232 sk-text" style="background-position-x: 50%;">13</text>
+            </view>
+          </view>
+          <view is="miniprogram_npm/@vant/weapp/divider/index">
+            <view class="van-divider index--van-divider van-divider--right index--van-divider--right sk-transparent sk-text-20-8333-514 sk-text sk-pseudo sk-pseudo-circle" style="margin-top: 0;">
+              新品❤
+            </view>
+          </view>
+          <view class="week-new-product">
+            <view class="product-item">
+              <view class="product-img">
+                <image class="auto-img sk-image" mode="widthFix" style="height: 164.141px;"></image>
+                <view is="miniprogram_npm/@vant/weapp/icon/index" class="new-icon">
+                  <view class="van-icon icon-index--van-icon van-icon-new icon-index--van-icon-new sk-pseudo sk-pseudo-circle" style="{{true}}"></view>
+                </view>
+              </view>
+            </view>
+            <view class="product-item">
+              <view class="product-img">
+                <image class="auto-img sk-image" mode="widthFix" style="height: 164.141px;"></image>
+                <view is="miniprogram_npm/@vant/weapp/icon/index" class="new-icon">
+                  <view class="van-icon icon-index--van-icon van-icon-new icon-index--van-icon-new sk-pseudo sk-pseudo-circle" style="{{true}}"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

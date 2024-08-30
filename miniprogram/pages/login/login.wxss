@@ -1,0 +1,113 @@
+/* pages/login/login.wxss */
+.login {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+
+}
+
+.r-btn {
+  margin-top: 20px;
+}
+
+.register-btn {
+  margin: 30px 15px 0;
+}
+
+.f-box {
+  margin-top: 20px;
+}
+
+.r-title {
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+.register {
+  padding: 15px 0;
+}
+
+.forgot {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.forgot .forgot-text {
+  margin-left: auto;
+  color: #666;
+}
+
+.login-btn {
+  margin-top: 50px;
+}
+
+.form-box {
+  margin-top: 50px;
+}
+
+.input {
+  border-radius: 999rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+  border: 2rpx solid #999;
+  text-align: center;
+}
+
+.welcome {
+  font-size: 24px;
+}
+
+.welcome-sub {
+  font-size: 16px;
+  color: #999;
+  margin-top: 20px;
+}
+
+.login-box {
+  padding: 15px;
+  margin-top: 80px;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-weight: bold;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.right-text {
+  color: #0C34BA;
+}
+
+
+.btn-login {
+  border-radius: 999rpx;
+}
+
+.rb {
+  width: 95%;
+  background-color: #0C34BA;
+  color: white;
+  border-radius: 999rpx;
+}
+
+.roundbtn {
+  display: block;
+  background-color: #0C34BA;
+  color: whitesmoke;
+  border-radius: 999rpx;
+}

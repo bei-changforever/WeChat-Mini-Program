@@ -1,0 +1,65 @@
+<!--components/navigationBar/navigationBar.wxml-->
+<!--components/customHeader/index.wxml-->
+<view class="{{['customHeader_box',menuFlag?'active': '']}}" style="height:{{titleHeight}}px;">
+    <!-- 菜单 -->
+    <view  class="menu_box" style="height:{{capsuleObj.height}}px; top:{{capsuleObj.top}}px;">
+
+
+        <view class="customIcon" wx:if="{{HomeFlag}}" bindtap="cancode">
+            <image class="cus-img" src="../../assets/images/cemra.png"></image>
+        </view>
+
+
+        <view class="customIcon menuthis" wx:if="{{menuFlag}}">
+            <image class="menuthis-img" src="../../assets/images/acup.png"></image>
+            <text>拼单</text>
+        </view>
+
+
+        <view class="customIcon backicon" wx:if="{{productInfoFlag}}">
+          <van-icon class="backicon-icon" color="white" name="arrow-left" bindtap="goback"/>
+        </view>
+
+        <view class="customIcon cart" wx:if="{{cartFlag}}">
+            <text>管理</text>
+        </view>
+
+
+
+    </view>
+
+  <!-- 返回+首页 -->
+    <!-- <view wx:if="{{backHomeFlag}}" class="backHome_box" style="width:{{capsuleObj.width}}px; height:{{capsuleObj.height}}px; top:{{capsuleObj.top}}px;">
+        <view class="customIcon backIcon" bindtap="backClick">
+            <image class="cus-img" src="/images/customBack.png"></image>
+        </view>
+        <view class="customIcon homeIcon" bindtap="homeClick">
+            <image class="cus-img" src="/images/customHome.png"></image>
+        </view>
+    </view> -->
+
+    <!-- 标题 -->
+    <view wx:if="{{HomeFlag}}" class="customHeader_title" style="top:{{capsuleObj.top}}px; height:{{capsuleObj.height}}px; line-height:{{capsuleObj.height}}px;">
+        {{customTitle}}
+    </view>
+
+    <view wx:if="{{menuFlag}}" class="customHeader_title active" style="top:{{capsuleObj.top}}px; height:{{capsuleObj.height}}px; line-height:{{capsuleObj.height}}px;">
+    <view class="cus-icon-input">
+      <van-icon name="search" class="cus-icon"/> <input bindtap="gotoSearch" type="text" class="input" placeholder="大家都在喝碧螺知春"/>
+    </view>
+    </view>
+
+    <view wx:if="{{cartFlag}}" class="customHeader_title" style="top:{{capsuleObj.top}}px; height:{{capsuleObj.height}}px; line-height:{{capsuleObj.height}}px;">
+        {{customTitle}}
+    </view>
+
+    <view wx:if="{{myFlag}}" class="customHeader_title" style="top:{{capsuleObj.top}}px; height:{{capsuleObj.height}}px; line-height:{{capsuleObj.height}}px;">
+        {{customTitle}}
+    </view>
+
+
+</view>
+
+<!-- 自定义顶部距离修正 -->
+<view class="customWrap" style="height:{{titleHeight}}px;"></view>
+

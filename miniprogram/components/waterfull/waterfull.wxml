@@ -1,0 +1,27 @@
+<!--components/waterfull/waterfull.wxml-->
+
+<view class="masonry">
+  <view class="item" wx:for="{{coffe_desc}}" wx:key="_id">
+    <image src="{{item.imgSrc}}" class="{{['masimg',activeIndex == index ? 'active' : '']}}" mode="widthFix" />
+
+
+    <view class="btn">
+      <van-icon bindtap="clickBtn" data-index="{{index}}" class="container-icon" name="{{activeIndex == index ? 'cross' : 'arrow-left'}}" color="white" />
+    </view>
+
+    <view class="{{['mark', activeIndex == index ? 'animated lightSpeedIn' : 'animated lightSpeedOut'  ]}}">
+      
+    </view>
+
+
+    <view class="{{['container', activeIndex == index ? 'animated lightSpeedIn' : 'animated lightSpeedOut'  ]}}">
+
+      <text>
+        {{item.desc}}
+      </text>
+
+    </view>
+
+
+  </view>
+</view>

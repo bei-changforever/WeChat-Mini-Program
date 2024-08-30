@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/my/my",
+    "pages/cart/cart",
+    "pages/productDetail/productDetail",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/personSelf/personSelf",
+    "pages/orders/orders",
+    "pages/address/address",
+    "pages/newAddress/newAddress",
+    "pages/pay/pay",
+    "pages/star/star"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./assets/images/home.png",
+        "selectedIconPath": "./assets/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "./assets/images/menu.png",
+        "selectedIconPath": "./assets/images/menu-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物袋",
+        "iconPath": "./assets/images/cart.png",
+        "selectedIconPath": "./assets/images/cart-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./assets/images/my.png",
+        "selectedIconPath": "./assets/images/my-active.png"
+      }
+    ],
+    "color": "#D3D3D3",
+    "selectedColor": "#13227a"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "custom-header": "./components/navigationBar/navigationBar",
+    "water-full": "./components/waterfull/waterfull"
+  
+  },
+  "requiredPrivateInfos": [
+    "getFuzzyLocation"
+
+  ],
+  "permission": {
+    
+    "scope.userLocation": {
+      "desc": "粤茶需要获取你的位置"
+    },
+    "scope.userFuzzyLocation": {
+      "desc": "粤茶需要获取你的位置"
+    }
+  }
+}
